@@ -3,23 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List App</title>
+    <title>Stellar Tasks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Animated background elements -->
+    <div class="blob-c">
+      <div class="shape blob1"></div>
+      <div class="shape blob2"></div>
+      <div class="shape blob3"></div>
+    </div>
+    
     <div class="container">
-      <div class="todo-list">
-        <h2>ToDo List <img src="images/icon.png" alt="" /></h2>
-        <div class="row">
-          <input type="text" id="searchBox" placeholder="Add your text" />
-          <button onclick="addTask()">Add</button>
+      <main class="todo-app">
+        <header>
+          <div class="header-info">
+            <h1 class="greeting">Good Morning</h1>
+            <p class="date">Monday, April 13</p>
+          </div>
+          <div class="task-stats">
+            <span id="pendingTasks">0</span> tasks pending
+          </div>
+        </header>
+
+        <div class="input-section">
+          <div class="input-glow"></div>
+          <input type="text" id="searchBox" placeholder="What's your next mission?" autocomplete="off" />
+          <button id="addBtn" aria-label="Add task">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          </button>
         </div>
-        <ul class="list-container">
-          <!-- <li class="checked">Task 1</li>
-          <li>Task 2</li>
-          <li>Task 3</li> -->
-        </ul>
-      </div>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="pending">Pending</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="list-wrapper">
+          <ul class="list-container" id="listContainer">
+            <!-- Tasks will go here -->
+          </ul>
+          
+          <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-icon">✨</div>
+            <p>You're all caught up!</p>
+          </div>
+        </div>
+
+        <div class="actions-footer">
+          <button id="clearAllBtn" class="secondary-btn">Clear Completed</button>
+        </div>
+      </main>
     </div>
     <script src="script.js"></script>
   </body>
