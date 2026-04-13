@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             completed: false
         };
 
-        tasks.unshift(newTask);
+        tasks.push(newTask);
         saveTasks();
         inputField.value = '';
         currentFilter = 'all'; // Reset filter when adding a new task
