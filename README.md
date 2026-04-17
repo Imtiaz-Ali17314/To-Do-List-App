@@ -21,7 +21,7 @@ A stunning, modern, and highly interactive To-Do List web application designed w
 
 1. Clone or download this repository.
 ```bash
-git clone https://github.com/YourUsername/To-Do-List-App.git
+git clone https://github.com/Imtiaz-Ali17314/STELLAR-TASKS-to-do-list-app
 ```
 2. Navigate to the project directory.
 3. Simply open `index.html` in any modern web browser to start organizing your life!
